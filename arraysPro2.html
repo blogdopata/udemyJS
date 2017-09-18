@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays :3</title>
+</head>
+<body>
+	
+
+<script>
+
+var arr= [
+			true,
+
+			{
+				nombre:"victor",
+				apellido:"caballero"
+			},
+			function (){
+				console.log("estoy en un array");
+			},
+			function (persona){
+
+				console.log(persona.nombre + " "+ persona.apellido);
+			},
+			[
+				"victor",
+				"fer",
+				"carlos",
+				"jorge",
+				[
+					"juan",
+					"aguanile",
+					"lynt",
+					function(){
+						console.log(this);
+					}
+				]
+			]
+		];
+
+console.log(arr[0], arr[1].nombre + " " + arr[1].apellido);
+arr[2]();
+
+arr[3](arr[1]);
+
+console.log(arr[4][1]);
+
+
+console.log(arr[4][4][2]);
+var arreglo2 = arr[4][4] ;
+
+arreglo2[2] = "chimichurri";
+console.log(arreglo2);
+console.log(arr[4][4][2]);
+
+arreglo2[3]();
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>anonimas</title>
+</head>
+<body>
+<script>
+(function(){
+
+var a = 5
+
+console.log(a);
+
+}());
+
+
+
+function ejecuta(fn){
+	if(fn()===1){
+		return true;
+	}else{
+		return false;
+	}
+	
+}
+
+console.log(ejecuta(function(){
+	console.log ("Funcion anonima ejectuada");
+	return 0;
+	})
+);
+
+
+
+</script>
+</body>
+</html>

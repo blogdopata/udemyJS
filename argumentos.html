@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Argumentos</title>
+</head>
+<body>
+
+
+
+<script>
+	var arguments = 10;
+function miFunction(a,b,c,d){
+	//console.log(arguments);
+	if(arguments.length != 4){
+		console.error("la funcion necesita 4 parametros");
+		return ;
+	}else{
+		console.log(a+b+c+d)
+	}
+	
+}	
+
+miFunction(20,20,20,30);
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script>
+
+
+function Persona( nombre, apellido){
+
+	this.nombre = nombre;
+	this.apellido = apellido;
+	this.edad= 30;
+
+	this.imprimirData = function(){
+		return this.nombre +  "  " + this.apellido +  " (" + this.edad +")";
+	}
+}
+
+
+var juan = new Persona("victor", "caballerow");
+
+console.log(juan.imprimirData());
+
+
+
+
+
+</script>

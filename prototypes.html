@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>proto</title>
+</head>
+<body>
+	
+
+
+
+
+<script>
+function Persona( nombre ){
+
+	this.nombre = nombre;
+	this.apellido="caballero";
+	this.edad = 30;
+
+	this.nombreCompleto = function (){
+		return this.nombre + " see" ;
+	}
+	
+}
+
+var victor  = new Persona("victorC");
+
+console.log(victor.nombreCompleto());
+
+
+
+</script>	
+</body>
+</html>

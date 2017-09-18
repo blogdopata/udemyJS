@@ -1,0 +1,24 @@
+<script>
+
+	var persona = {
+		nombre: "victor",
+		apellido: "caballero",
+		edad : 25,
+		direccion: {
+			pais: "Lima",
+			ciudad:"Lima",
+			edificio:{
+				nombre:"Los conches",
+				telf: 993677147
+			}
+		}
+	};
+
+	var campo = ["direccion"];
+
+ 	console.log( persona[campo]);
+
+	var  edificio = persona.direccion.edificio;
+	 edificio.nroPiso = "octavo Piso";
+	 console.log(edificio.nroPiso);
+</script>
