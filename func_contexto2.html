@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contexto</title>
+</head>
+<body>
+	
+<script>
+function crearFunc(){
+	var arr = [];
+	var numero = 1;
+
+	(function(numero){
+		arr.push(function(){
+		console.log(numero);
+		});		
+	})(numero);
+	
+
+	numero = 2;
+	(function(numero){
+		arr.push(function(){
+		console.log(numero);
+	});
+	})(numero);
+	
+	numero = 3;
+	arr.push(function(){
+		console.log(numero);
+	});
+
+	return arr;
+
+}
+
+var miFuncion = crearFunc();
+
+miFuncion[0]();
+miFuncion[1]();
+miFuncion[2]();
+
+
+</script>
+
+</body>
+</html>
