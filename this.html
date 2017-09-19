@@ -1,34 +1,29 @@
+
 <script>
-var nombre =" sexo"
-var pais="costa";
 
 var persona = {
-	nombre:"victor",
-	apellido:"caballero",
-	imprimirNombre: function(){
-	
-
-		console.log(this.nombre + " " + this.apellido);
-	},
-	direccion: {
-		pais:"costa Rica",
-		obtenerPais: function(){
-
-			var self = this;
-
-			var nuevaDireccion = function(){
-				console.log(self);
-				console.log("La direccion es en : " + self.pais);
-
+		nombre: "victor",
+		apellido: "caballero",
+		imprimeNombre : function(){
+			console.log(this);
+			console.log( this.nombre + " " + " "+  this.apellido);
+		},
+		direccion: {
+			pais: " Perukista",
+			obtenerPais : function(){
+	        var self = this;
+			
+					var nuevaDireccion =  function () {
+							console.log(self);
+							console.log( "la direccion es  en :" + self.pais );
+					}
+					
+					nuevaDireccion();
 			}
-
-			nuevaDireccion();
 		}
-	}
+}
+ 
 
-};
 
 
-persona.imprimirNombre(); 
-persona.direccion.obtenerPais();
 </script>

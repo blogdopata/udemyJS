@@ -1,24 +1,39 @@
+
 <script>
 
+function Persona(nombre , apellido){
+  	this.nombre = nombre ;
+  	this.edad = 20;
+  	this.apellido = apellido;
 
-function Persona( nombre, apellido){
+  	this.nombreComplete = function(){
+  		return this.nombre + " " + this.apellido;
+  	}
+}
 
-	this.nombre = nombre;
-	this.apellido = apellido;
-	this.edad= 30;
-
-	this.imprimirData = function(){
-		return this.nombre +  "  " + this.apellido +  " (" + this.edad +")";
-	}
+function Mascota (obj){
+		this.nombre = obj.nombre;
+		this.raza = obj.raza;
+		this.edad =  obj.edad;
+		this.imprimeMascota = function(){
+				return this.nombre + " " + this.raza;
+		}
 }
 
 
-var juan = new Persona("victor", "caballerow");
+var perro1 = {
+			nombre:"catdog",
+			raza:"pekines",
+			edad:20
+	}
 
-console.log(juan.imprimirData());
+var perron =  new Mascota(perro1);
+console.log(perron);
+
+//console.log(perron.imprimeMascota());
 
 
-
-
+// var juan = new Persona( "gabo" , "chares");
+// console.log(juan.nombreComplete());
 
 </script>
