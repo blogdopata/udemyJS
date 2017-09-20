@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Polimorfismo</title>
+</head>
+<body>
+
+
+<script>
+	var fecha = new Date(2017,8,19);
+		Date.prototype.sumarDias =  function(diasSuma){
+			this.setDate(this.getDate() + diasSuma);
+
+			return this;
+		}
+		Date.prototype.sumarAnios =  function(anios){
+			this.setFullYear( this.getFullYear() + anios ) ;
+
+			return this;
+		}
+
+		console.log(fecha);
+		console.log( fecha.sumarDias(5));
+		console.log( fecha.sumarAnios(10));
+</script>
+
+</body>
+</html>

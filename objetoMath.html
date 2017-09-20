@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objeto Math</title>
+</head>
+<body>
+<script>
+var PI = Math.PI;
+var E = Math.E;
+
+console.log(PI);
+console.log(E);
+
+var num = 10.556789;
+console.log( num);
+console.log( Math.round(num)); // al entero cercano
+
+console.log( Math.round(num*100)/100);
+
+console.log( Math.floor(num)); // lo deja al numero entero en el que esta
+
+var rnd = Math.random();
+console.log(rnd);
+
+function randomEntre( min , max){
+
+	return Math.floor(Math.random()* (max -min +1) +min);
+}
+
+console.log ( randomEntre(5,10) );
+
+console.log (Math.sqrt( randomEntre(25,30)));
+
+console.log(Math.pow(7,3));
+</script>
+<script>
+
+</script>
+
+</body>
+</html>
