@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BIND-CALL-APPLY</title>
+</head>
+<body>
+	
+<script>
+	
+var carro = {
+	color:"blanco",
+	marca:"mazda",
+	imprimir: function(){
+		var salida = this.marca + " - "+ this.color;
+		return salida;
+	}
+
+}
+
+var carro2 = {
+	color:"rojo",
+	marca:"toyota"
+}
+
+console.log(carro.imprimir());
+
+
+var logCarro= function (arg1,arg2){
+	
+	console.log("Carro: ", this.imprimir());
+	console.log("Argumentos:" , arg1,arg2)
+	console.log("=========================");
+}
+
+var logModeloCarro = logCarro.bind(carro);
+
+logModeloCarro("abc","xyz");
+
+
+logModeloCarro.call(carro, "123","456")
+
+//solo se l enviarn 2 parametros el objeto y un array  y se usa cuando no se sabe la cantidad de parametros que se le envie a la funciòn
+logModeloCarro.apply(carro, ["asd","asd2"]);
+
+// Y PARA LO QUE SIRVE !!!
+// Funciones Prestadas 
+console.log(carro.imprimir.call(carro2));
+
+
+
+</script>
+
+
+</body>
+</html>

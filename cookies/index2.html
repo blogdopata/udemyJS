@@ -2,21 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Node server</title>
+	<title>TEST JS</title>
 </head>
 <body>
-	<h2>Generar un servidor Local con node</h2>
-<ul>
-	<li>Todo como administrador</li>
-	<li>Instalar node </li>
-	<li>Instalar : npm install http-server -g</li>
-	<li> http-server [path] [options]</li>
-	<li> Path : indicar la ruta de la carpeta a levantar</li>
-	<li>Option: darle "p" y pone r 8080</li>
-</ul>
- <h2>http-server C:\Users\victor_caballero1\Desktop\js -p  8080
-</h2>
+	TEST COOKIES
+ 2
+<script>
 
-</ul>
+function crearCookie(nombreCook, valor){
+
+	valor = escape(valor);
+	// fecha d vida d la cookie
+	var hoy = new Date();
+	hoy.setMonth( hoy.getMonth() + 1 );
+
+	// asiganmos la cookie e indicamos su venciomiento
+	document.cookie= nombreCook+"="+valor+";expires=" + hoy.toUTCString()+";";
+}	
+
+function borrarCookie(nombreCook){
+	// borraremos la cookie
+	var hoy = new Date();
+	hoy.setMonth( hoy.getMonth() - 1 );
+
+	// asiganmos la cookie e indicamos su venciomiento
+	document.cookie= nombreCook+"=x;expires=" + hoy.toUTCString()+";";
+}
+
+function getCookie(nombreCook){
+
+	var cookies = document.cookie;
+
+	var cookieArr = cookies.split("; ");
+
+	//console.log(cookieArr);
+
+	for (var i = 0; i<cookieArr.length; i++) {
+			
+			var parArr = cookieArr[i].split("=");
+			console.log(parArr);
+			cookieArr[i] = parArr;
+			
+
+			if(parArr[0] === nombreCook){
+				return unescape(parArr[1]);
+			}
+	}
+
+	return undefined;
+}
+
+console.log(getCookie("telef"));
+
+
+// crearCookie("nombre","victor");
+// crearCookie("correo","vcaballeroc@hotmail.com")
+// crearCookie("telef",993677147);
+// crearCookie("direccion","Calle Lima-Lince")
+// //borrarCookie("nombre");
+
+// var cookies = document.cookie;
+
+// console.log(cookies);
+
+</script>
+
+
+
+
 </body>
 </html>
