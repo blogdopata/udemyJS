@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TEST JS</title>
+</head>
+<body>
+	TEST COOKIES
+
+<script>
+
+function crearCookie(nombreDCokie,valor){
+
+	valor = escape(valor);
+
+	var hoy = new Date();
+	hoy.setMonth(hoy.getMonth()+1);
+	document.cookie = nombreDCokie + "="+ valor +";expires="+hoy.toUTCString()+";";
+
+}	
+	
+function borrarCookie(nombreDCokie){
+		var hoy = new Date();
+		hoy.setMonth(hoy.getMonth()-1);
+		document.cookie = nombreDCokie + "=x;expires="+hoy.toUTCString()+";";
+
+
+}
+
+function getCookie( nombreDCokie ){
+
+		var cookies = document.cookie;
+
+		var cookieArr = cookies.split("; ");
+		console.log(cookieArr);
+
+		for ( var i = 0 ; i<cookieArr.length; i++){
+
+			var parArr = cookieArr[i].split("=");
+			 cookieArr[i] = parArr;
+
+			 if(parArr[0] === nombreDCokie){
+			 	return unescape(parArr[1]);
+			 }
+		}
+		console.log(cookieArr)
+
+		return undefined ;
+}
+
+console.log(getCookie("nombre"));
+
+	// crearCookie( "nombre","Victor")
+	// crearCookie("correo" , "victor@hotmail.com")
+	// crearCookie("direccion" , "Lima , Lince - A")
+//borrarCookie("nombre");
+
+	
+	// console.log(cookies);
+
+
+
+// var demo = "123;123*123'123/";
+// console.log(escape(demo));
+// 	console.log(unescape(escape(demo)));
+</script>
+
+
+
+
+</body>
+</html>
