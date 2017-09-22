@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+</head>
+<body>
+<script>
+
+	var objetoJS = {
+		nombre:"victor", 
+		edad : 30,
+		imprimir: function (){
+			 console.log(this.nombre , this.edad);
+		}
+	};
+
+	console.log("objeto literal"  , objetoJS);
+
+// convierto mi objeto a formato JSON
+	var jsonString = JSON.stringify(objetoJS);
+
+	console.log(jsonString);
+
+var objetoDesdeJson = JSON.parse(jsonString);
+console.log("json parseado" , objetoDesdeJson);
+
+
+console.log(objetoDesdeJson.nombre);
+</script>
+</body>
+</html>

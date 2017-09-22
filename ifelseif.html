@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BIND-CALL-APPLY</title>
+</head>
+<body>
+	
+<script>
+	
+var a = 40;
+var b = 50;
+
+var c= ( a > b ) ? function (){
+	 
+	 console.log("A es mayor que B");
+	 return a;
+
+}() : (function(){
+			console.log("B es mayor que A");
+			 return b;
+})();
+
+var d = 44;
+var e = 55;
+
+var f = d|| e;
+
+console.log(f);
+
+function getNombre( nombre){
+
+	var nom = nombre || null ||  undefined || "<sin nombre>";
+
+	console.log(nom);
+}
+getNombre();
+
+
+// if(a>b){
+// 	c=a;
+// }else{
+// 	c=b;
+// }
+
+
+</script>
+
+
+</body>
+</html>
