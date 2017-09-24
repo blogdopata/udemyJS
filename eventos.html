@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SETIMEOUT</title>
+</head>
+<body>
+	
+	<button id="boton">
+		Botton
+	</button>
+
+	<input type="text" id="objDemo">
+<script>
+function evento(arg){
+		this.nombre = arg;
+		console.log("Me dispare");
+		console.log(arg);
+		console.log(this);
+		console.log(arg.x , arg.y);
+	
+	}
+
+var objeto = document.getElementById("boton");
+ // simulo el click istruted false	objeto.click();
+ objeto.addEventListener("click", evento("victor"))
+
+
+
+
+
+</script>
+
+</body>
+</html>

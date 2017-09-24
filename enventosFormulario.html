@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eventos Form</title>
+</head>
+<body>
+
+<form action="" onsubmit="return validar();">
+	<input type="text" id="txtNom" name="txtNom">
+	<input type="text" id="txtApe" name="txtApe">
+
+
+<button type="submit">
+	Go data
+</button>
+
+</form>
+
+
+
+<script>
+	// Simple  validacion
+function validar(){
+	var nombre = document.getElementById("txtNom").value;
+	var apellido = document.getElementById("txtApe").value;
+
+	if(nombre.length < 5){
+		return false;
+	}
+	if(apellido.length < 2){
+		return false;
+	}
+
+	return true;
+}
+	
+// Obteniendo la URL 
+
+console.log(window.location.search)
+
+function getParamURL(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+
+console.log(getParamURL("txtNom"));
+
+</script>
+
+</body>
+</html>

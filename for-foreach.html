@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ForEach</title>
+</head>
+<body>
+	
+<script>
+
+var Persona = function(){
+	this.nombre =" victor";
+	this.cabellero = "Caballero";
+	this.edad = 28;
+}
+
+function Trabajador(){
+	this.name = "viktor";
+	this.code=  2564554;
+	this.stade = "contratado";
+}
+var victor = new Trabajador();
+
+Trabajador.prototype.direccion ="Lince";
+for(prop in  victor){
+	// Para solo ver sus propiedades:
+	if( victor.hasOwnProperty(prop)){
+		//console.log(prop,":" ,victor[prop]);
+
+	}else{
+		console.log(prop,":" ,victor[prop]);	
+	}
+}
+/* recorrer el array con un FOR EADCH */ 
+for( num in [1,2,3,4,5,6,7,"xD",9,10]){
+	console.log(num);
+}
+[1,2,3,4,5,6,7,"xD",9,10].forEach(function(valor){
+	console.log(valor*2);
+})
+
+
+// for (var i = 0; i<10 ; i++){
+
+// 	if(i==5){
+// 		//continue
+// 		break;
+// 	}
+// 	console.log(i);
+// }	
+
+
+</script>
+
+</body>
+</html>

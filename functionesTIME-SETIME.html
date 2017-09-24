@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SETIMEOUT</title>
+</head>
+<body>
+	
+<script>
+
+var victor ={
+	nombre : "victor",
+	edad: 30,
+	imprimir: function(){
+
+		var self = this;
+		setTimeout(function(){
+			console.log(self.nombre,self.edad);
+		},1000);
+		
+	}
+};
+victor.imprimir();
+
+
+
+
+
+
+// -------------Pasaran 5 segundos y se ejecutara
+
+// setTimeout(function(){
+
+// 	console.log("pasara 5 seg");
+
+
+// },5000);
+
+// -------------- cada 3 sgundos se ejecuta
+
+// var segundos = 0;
+
+// var intervalo = setInterval(function(){
+ 
+// 	segundos ++ ;
+
+// 	console.log("seg", segundos);
+
+// 	if(segundos == 3){
+// 		clearInterval(intervalo);
+// 	}
+
+// },3000);
+
+
+</script>
+
+</body>
+</html>
