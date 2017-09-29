@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom</title>
+
+</head>
+<body>
+
+		<p id="parrafo">
+			<a id="miLink" href="http://google.com">Mi pagina web</a>
+		</p>
+				<a class="link2" href="http://2google2.com"></a>
+				<a id="vinculo" href="http://55googl55.com"></a>
+		<p id="result"> </p>
+
+	<input type="button" value="enviar" onclick="getLink()">
+
+
+<script>
+	
+function	getLink(){
+ 	var link = document.getElementById("miLink");
+  var vinculo = link.href;
+  console.log(vinculo);
+  var parrafo = document.getElementById("result");
+  parrafo.innerHTML = vinculo;
+
+   createElement
+}
+
+</script>
+</body>
+</html>

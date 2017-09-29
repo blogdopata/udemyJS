@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom</title>
+
+</head>
+<body id="cuerpo" onload="load();">
+	<p> texto</p>
+		<div id="caja">
+			
+
+		</div>
+
+	<input type="button" value="enviar" onclick="test()">
+	<p> texto</p>
+
+<script>
+	
+	var tags
+function load(){
+	tags = document.getElementsByTagName('p') ;
+	console.log(tags) ;
+}
+
+function test(){
+	var elemento = document.createElement("p") ;
+
+	var text = document.createTextNode("Elemento " + (tags.length+1));
+
+ 	elemento.appendChild(text) ;
+
+ 	var miDiv = document.getElementById("caja") ;
+ 			miDiv.appendChild(elemento) ;
+
+	load();
+
+}
+
+</script>
+</body>
+</html>

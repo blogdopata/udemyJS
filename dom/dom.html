@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom</title>
+
+</head>
+<body>
+	<div id="cont">
+		<p id="parrafo">
+			Soy un Parrafo
+		</p>
+	</div>
+	<input type="button" value="enviar" onclick="testDom()">
+
+
+<script>
+	
+function	testDom(){
+	var obj2 = document.getElementById("parrafo");
+	   	obj2.innerHTML = "esto es otro parrafo";
+	   	obj2.style.color = "red";
+	   	console.log(obj2.innerHTML);
+	   	console.log(obj2)
+}
+
+</script>
+</body>
+</html>
