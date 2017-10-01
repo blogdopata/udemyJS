@@ -10,6 +10,10 @@
 		<p id="parrafo">
 			Soy un Parrafo
 		</p>
+
+	</div>
+	<div id="contenido">
+		soy texto
 	</div>
 	<input type="button" value="enviar" onclick="testDom()">
 
@@ -18,10 +22,17 @@
 	
 function	testDom(){
 	var obj2 = document.getElementById("parrafo");
+	var divShow = document.getElementById("contenido");
+	var texto = document.createTextNode(55);
+	divShow.appendChild(texto);
+
+
 	   	obj2.innerHTML = "esto es otro parrafo";
 	   	obj2.style.color = "red";
 	   	console.log(obj2.innerHTML);
-	   	console.log(obj2)
+	   	console.log(obj2);
+	   	console.log(this);
+	  
 }
 
 </script>
