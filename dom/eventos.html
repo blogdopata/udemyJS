@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom Event</title>
+
+</head>
+<body>
+
+	
+<button id="boton"> boton </button>
+
+	
+<input type="button" value="agregar" >
+<input type="text" id="input">
+
+
+<script>
+ 	
+(function(){
+
+	var saludo = function(){
+		console.log("focus");
+	}
+
+
+	var input = document.getElementById("input");
+	input.addEventListener("focus", saludo);
+
+
+}());
+
+
+</script>
+</body>
+</html>
