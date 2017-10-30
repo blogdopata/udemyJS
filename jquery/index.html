@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jquery</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="jquery.js"></script>
+<style>
+	.textoVerde{
+		color:rebeccapurple;
+	}
+	.textoBold{
+		font-weight: bold;
+	}
+</style>
+<script>
+	$(function(){
+		$('li:nth-child(odd)').addClass('textoVerde textoBold');
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+
+		<ul id="bold">
+			<li><span class="label label-primary">Texto 1</span></li>
+			<li>Texto 2</li>
+			<li>Texto 3</li>
+		</ul>
+
+	<table class="table table-striped">
+		<tr>
+			<td>campo</td>
+			<td>campo</td>
+			<td>campo</td>
+			<td>campo</td>
+			<td>campo</td>
+		</tr>
+	</table>
+	<button>GO</button>
+
+</div>
+
+</body>
+</html>
