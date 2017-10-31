@@ -1,0 +1,16 @@
+dl{
+	max-width: 400px;
+	border: 1px solid red;
+}
+dd{
+	margin:0;
+	padding:10px;
+}
+dt{
+	cursor: pointer;
+	font-size: 18px;
+	background-color: rebeccapurple;
+	color:white;
+	border-bottom:1px solid #c5c5c5;
+	border-top: 1px solid white;
+}
