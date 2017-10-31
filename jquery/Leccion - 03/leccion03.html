@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 03 - Eventos</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<style>
+		.img100{
+			width: 100px;
+			height: 100px;
+		}
+		.rojo{
+			background-color: red;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Lección 03: Eventos</h1>
+	<hr>
+
+	<button id="bot1" class="btn btn-primary"> Evento Click</button>
+ <br> <br>
+ <img src="img/profesor.jpg" alt="" class="img100">
+	
+	<div class="rojo"></div>
+
+	<br><br>
+	<a id="linkU"href="http://udemy.com">Ir udemy</a>
+	<br><br>
+
+</div>
+
+
+<script>
+	$(function(){
+		$("#bot1").on("click",function(){
+				console.log("click!");
+
+		});
+   // Evento mouse entra
+		$(".img100").on("mouseenter",function(){
+				$(this).attr("src","img/nophoto.jpg");
+
+		});
+
+		$(".img100").on("mouseleave",function(){
+				$(this).attr("src","img/profesor.jpg");
+		});
+
+		$(".rojo").on("click", function(){
+			$(this).css("background-color","blue");
+		})
+
+		$(".rojo").on("mouseleave", function(){
+			$(this).css("background-color","orange");
+		})
+	// CONTROLES PARA LINKS 
+	$("#linkU").on('click', function(e){
+		e.preventDefault();
+
+		console.log("CLICK EN EL LINK...")
+		var link =  $(this).attr("href");
+		console.log(link);
+		window.location = link;
+	});
+
+	console.log("La pagina ya cargo total :D")
+});
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
