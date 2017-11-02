@@ -20,7 +20,8 @@
 	
 	<h1>Lección 05: On y Bind</h1>
 	<hr>
-
+	
+	<h3> Click Here</h3>
 
 
 
@@ -28,7 +29,29 @@
 
 </div>
 
+<script>
+	(function(){
+		var contador = 0;
+		
+		$("body").on('click','h3', function(){
+			contador++;
+			var h3Dinamico = "<h3 id='h3-"+contador+"'>Dinámico: " + contador +"...</h3>";
+			//$("body").append(h3Dinamico); manda al fin 
+			//$(".container").prepend(h3Dinamico); //manda al incio
+			$(".container").append(h3Dinamico);
 
+			if(contador ===3){
+				$("#h3-2").on("click", function(){
+					console.log("Function dinamica");
+				});
+			}
+
+		});
+
+
+	})();
+
+</script>
 
 
 

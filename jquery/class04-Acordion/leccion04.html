@@ -25,9 +25,12 @@
 
 		<dl>
 			<dt>Titulo del Acordion</dt>
-			<dd>Este es el detalle del acordeon</dd>
+			<dd>Este es el detalle del acordeon
+				
+			</dd>
 			<dt>Titulo del Acordion</dt>
-			<dd>Este es el detalle del acordeon</dd>
+			<dd>Este es el detalle del acordeon
+			 <h2>Vamos a lograrlo :D</h2></dd>
 			<dt>Titulo del Acordion</dt>
 			<dd>Este es el detalle del acordeon</dd>
 			<dt>Titulo del Acordion</dt>
@@ -38,6 +41,20 @@
 		
 	</div>
 
+	<div align="center">
+
+		<nav>
+			<div class="titulo">Titulo del Acordion</div>
+			<div class="extracto">Este es el detalle del acordeon</div>
+			<div class="titulo">Titulo del Acordion</div>
+			<div class="extracto">Este es el detalle del acordeon <h2>GO</h2></div>
+			<div class="titulo">Titulo del Acordion</div>
+			<div class="extracto">Este es el detalle del acordeon</div>
+			<div class="titulo">Titulo del Acordion</div>
+			<div class="extracto">Este es el detalle del acordeon</div>
+		</nav>
+		
+	</div>
 
 
 </div>
@@ -50,7 +67,8 @@
 	dds.hide();
 	dds.eq(0).show();
 
-	$('dt').on('mouseenter', function(){
+
+	$('dt').on('click', function(){
 
 		//dds.hide();
 		dds.slideUp(200);
@@ -60,6 +78,22 @@
 			//.show();
 
 	});
+
+	var extractos = $(".extracto");
+	extractos.hide();
+	extractos.eq(0).show();
+
+	
+	$('.titulo').on("click",function(){
+		
+		extractos.slideUp(200);
+		$(this).next().slideDown(200);
+
+		$("h5").hide();
+	});
+
+
+
 })();
 
 
