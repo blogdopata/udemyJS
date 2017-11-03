@@ -35,6 +35,7 @@
 		
 		$("body").on('click','h3', function(){
 			contador++;
+			//console.log(contador);
 			var h3Dinamico = "<h3 id='h3-"+contador+"'>Dinámico: " + contador +"...</h3>";
 			//$("body").append(h3Dinamico); manda al fin 
 			//$(".container").prepend(h3Dinamico); //manda al incio
@@ -43,6 +44,7 @@
 			if(contador ===3){
 				$("#h3-2").on("click", function(){
 					console.log("Function dinamica");
+					console.log(contador);
 				});
 			}
 
