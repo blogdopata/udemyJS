@@ -45,13 +45,13 @@
 
 		<nav>
 			<div class="titulo">Titulo del Acordion</div>
-			<div class="extracto">Este es el detalle del acordeon</div>
+			<div class="contenido">Este es el detalle del acordeon</div>
 			<div class="titulo">Titulo del Acordion</div>
-			<div class="extracto">Este es el detalle del acordeon <h2>GO</h2></div>
+			<div class="contenido">Este es el detalle del acordeon <h2>GO</h2></div>
 			<div class="titulo">Titulo del Acordion</div>
-			<div class="extracto">Este es el detalle del acordeon</div>
+			<div class="contenido">Este es el detalle del acordeon</div>
 			<div class="titulo">Titulo del Acordion</div>
-			<div class="extracto">Este es el detalle del acordeon</div>
+			<div class="contenido">Este es el detalle del acordeon</div>
 		</nav>
 		
 	</div>
@@ -79,14 +79,14 @@
 
 	});
 
-	var extractos = $(".extracto");
-	extractos.hide();
-	extractos.eq(0).show();
+	var contenidos = $(".contenido");
+	contenidos.hide();
+	contenidos.eq(0).show();
 
 	
 	$('.titulo').on("click",function(){
 		
-		extractos.slideUp(200);
+		contenidos.slideUp(200);
 		$(this).next().slideDown(200);
 
 		$("h5").hide();

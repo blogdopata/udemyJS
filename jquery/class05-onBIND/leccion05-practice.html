@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 05 - On y Bind</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Lección 05: On y Bind</h1>
+	<hr>
+	
+	<h3 id="h3Btn"> Click Here</h3>
+
+
+
+
+
+</div>
+
+<script>
+	(function(){
+		var contador= 0;
+		
+		$(".container").on('click','h3',function(){
+				contador++;
+				var h3Dyn = '<h3 id=h3-'+ contador+'>'+ contador +'</h3>';
+				$(".container").append(h3Dyn);
+
+				if(contador ===3){
+					$("#h3-3").on("click", function(){
+						 alert("clickeaste en el h3 de id h3-3");
+					})
+				}
+		});
+
+
+	})();
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
