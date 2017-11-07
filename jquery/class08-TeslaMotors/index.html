@@ -23,9 +23,9 @@
 	
 
 	
-	<div class="divPreloader">
+	<!-- <div class="divPreloader">
 		<img src="img/loading.gif" class="imgLoader img-responsive">
-	</div> 
+	</div>  -->
 
 	
 	<div class="divVistaPrevia">
@@ -50,7 +50,7 @@
 (function(){
 
 	var teslaView = {
-		colores: ['blanco'],
+		colores: ['rojo'],
 
 		//funcion para cambiar el color
 		cambiaColor: function( img ){
@@ -63,7 +63,6 @@
 
 			$.extend( teslaView, opciones);
 
-			console.log(teslaView);
 
 			// Ciclo para barrer el arreglo d colores y crear el comboBox
 			for(var i=0;i<teslaView.colores.length;i++){
