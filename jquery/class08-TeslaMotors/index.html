@@ -29,7 +29,7 @@
 
 	
 	<div class="divVistaPrevia">
-		<img id="imgCarro" src="img/tesla/modelS-blanco.jpg" class="img-responsive">
+		<img id="imgCarro"  class="img-responsive">
 	</div>
 
 	<div class="form-group">
@@ -50,13 +50,42 @@
 (function(){
 
 	var teslaView = {
-		colores: ['rojo'],
+
+		colores: ['blanco'],
+		loader: $(".divPreloader"),
 
 		//funcion para cambiar el color
-		cambiaColor: function( img ){
+		cambiarColor: function( img ){
+
+			var $loader = teslaView.loader;
+			$loader.fadeIn(150);
+
+			if(img ===undefined){
+				var color = teslaView.colores[0];
+				img 	= "img/tesla/modelS-"+color+".jpg";
+				
+			}
+
+			// var ahora = new Date();
+			// console.log(ahora);
+			//img = "http://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg?d="+ahora;
+			
+			$("<img>",{
+				src: img,
+				class: "img-responsive"
+			})
+				.on( "load", function(){
+
+					// var ahora = new Date();
+					// console.log(ahora);
+					
+					$(".divVistaPrevia").find("img").remove();
+					$(this).appendTo('.divVistaPrevia');
+
+					$loader.fadeOut(150);
+			})
 
 		},
-
 
 		//Funcion principal
 		init: function( opciones ){
@@ -65,7 +94,7 @@
 
 
 			// Ciclo para barrer el arreglo d colores y crear el comboBox
-			for(var i=0;i<teslaView.colores.length;i++){
+			for( var i=0 ; i<teslaView.colores.length ; i++){
 				var color =  teslaView.colores[i];
 				$("<option>",{
 					value: color,
@@ -75,31 +104,32 @@
 			// Nueva funcion del cambio
 			$("#cmbColor").bind("change",function(){
 						
-						var color = $(this).val();
-						var url   = "img/tesla/modelS-"+color+".jpg" ;
-	 					
-	 					$("#imgCarro").attr("src",url);
+				var color = $(this).val();
+				var url   = "img/tesla/modelS-"+color+".jpg";
+	 			
+	 			teslaView.cambiarColor(url)		
+	 			//$("#imgCarro").attr("src",url);
 			 });
-		
-
+				
+			// Cambiar la imagen al iniciar en el init	
+			teslaView.cambiarColor();
 		}
 
 };
 
+	
 	teslaView.init({
-		colores:['rojo','verde','gris','negro'],
+		colores:['rojo','verde','gris','negro','cafe']
 	});
 
-	// Forma simple sin objetos
-	// $("#cmbColor").on("change", function(){
+	/* Forma simple sin objetos
+	   $("#cmbColor").on("change", function(){
 
-	// 		var color = $(this).val();
-	// 		var url   = "img/tesla/modelS-"+color+".jpg" ;
+	 		var color = $(this).val();
+	 		var url   = "img/tesla/modelS-"+color+".jpg" ;
 
-	// 		$("#imgCarro").attr("src",url);
-	// });
-
-
+	 		$("#imgCarro").attr("src",url);
+	 });*/
 
 
 
