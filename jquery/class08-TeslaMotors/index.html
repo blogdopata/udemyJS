@@ -29,7 +29,7 @@
 
 	
 	<div class="divVistaPrevia">
-		<img id="imgCarro" src="img/tesla/modelS-blanco.jpg" class="img-responsive">
+		<img id="imgCarro"  class="img-responsive">
 	</div>
 
 	<div class="form-group">
@@ -50,21 +50,39 @@
 (function(){
 
 	var teslaView = {
+
+		loader: $(".divPreloader"),
 		colores: ['blanco'],
 
 		//funcion para cambiar el color
 		cambiarColor: function( img ){
 
-			var ahora = new Date();
-			console.log(ahora);
+			var $loader = teslaView.loader;
+			$loader.fadeIn(150);
+
+			if(img ===undefined){
+				var color = teslaView.colores[0];
+				img 	= "img/tesla/modelS-"+color+".jpg";
+				
+			}
+
+			// var ahora = new Date();
+			// console.log(ahora);
+			//img = "http://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg?d="+ahora;
 			
 			$("<img>",{
 				src: img,
-				class:"img-reponsiv"
-			}).load(function(){
-				var ahora = new Date();
-				console.log(ahora);
-			
+				class: "img-responsive"
+			})
+				.on( "load", function(){
+
+					// var ahora = new Date();
+					// console.log(ahora);
+					
+					$(".divVistaPrevia").find("img").remove();
+					$(this).appendTo('.divVistaPrevia');
+
+					$loader.fadeOut(150);
 			})
 
 		},
@@ -74,10 +92,9 @@
 
 			$.extend( teslaView, opciones);
 
-			console.log(teslaView);
-
+			
 			// Ciclo para barrer el arreglo d colores y crear el comboBox
-			for(var i=0;i<teslaView.colores.length;i++){
+			for( var i=0 ; i<teslaView.colores.length ; i++){
 				var color =  teslaView.colores[i];
 				$("<option>",{
 					value: color,
@@ -93,11 +110,14 @@
 	 			teslaView.cambiarColor(url)		
 	 			//$("#imgCarro").attr("src",url);
 			 });
-		
+				
+			// Cambiar la imagen al iniciar en el init	
+			teslaView.cambiarColor();
 		}
 
 };
 
+	
 	teslaView.init({
 		colores:['rojo','verde','gris','negro','cafe']
 	});
@@ -110,8 +130,6 @@
 
 	 		$("#imgCarro").attr("src",url);
 	 });*/
-
-
 
 
 
