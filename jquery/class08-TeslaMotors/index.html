@@ -22,22 +22,21 @@
 	<hr>
 	
 
-	<!-- 
+	
 	<div class="divPreloader">
 		<img src="img/loading.gif" class="imgLoader img-responsive">
 	</div> 
-	-->
+
 	
 	<div class="divVistaPrevia">
-		<img src="img/tesla/modelS-blanco.jpg" class="img-responsive">
+		<img id="imgCarro" src="img/tesla/modelS-blanco.jpg" class="img-responsive">
 	</div>
 
 	<div class="form-group">
 	    <div class="col-sm-offset-4 col-sm-5">
 	      	<select id="cmbColor" class="form-control">
-	      		<option value="blanco">Blanco</option>
-	      		<option value="negro">Negro</option>
-	      		<option value="rojo">Rojo</option>
+	      		<!-- <option value="blanco">Blanco</option> -->
+	      		
 	      	</select>
 	    </div>
 	</div>
@@ -49,6 +48,58 @@
 <script>
 	
 (function(){
+
+	var teslaView = {
+		colores: ['blanco'],
+
+		//funcion para cambiar el color
+		cambiaColor: function( img ){
+
+		},
+
+
+		//Funcion principal
+		init: function( opciones ){
+
+			$.extend( teslaView, opciones);
+
+			console.log(teslaView);
+
+			// Ciclo para barrer el arreglo d colores y crear el comboBox
+			for(var i=0;i<teslaView.colores.length;i++){
+				var color =  teslaView.colores[i];
+				$("<option>",{
+					value: color,
+					text: color,
+				}).appendTo('#cmbColor');
+			}
+			// Nueva funcion del cambio
+			$("#cmbColor").bind("change",function(){
+						
+						var color = $(this).val();
+						var url   = "img/tesla/modelS-"+color+".jpg" ;
+	 					
+	 					$("#imgCarro").attr("src",url);
+			 });
+		
+
+		}
+
+};
+
+	teslaView.init({
+		colores:['rojo','verde','gris','negro'],
+	});
+
+	// Forma simple sin objetos
+	// $("#cmbColor").on("change", function(){
+
+	// 		var color = $(this).val();
+	// 		var url   = "img/tesla/modelS-"+color+".jpg" ;
+
+	// 		$("#imgCarro").attr("src",url);
+	// });
+
 
 
 
