@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Presentacion de Vehículo</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+	<h1>Objetos Prácticos: </h1>
+	<hr>
+	<div class="row">
+		<div class="col-md-3">
+				<ul>
+					<li><a id="av-1" href="#">CESSNA 152</a></li>
+					<li><a id="av-2" href="#">Avión 2</a></li>
+					<li><a id="av-3" href="#">Simulador Red BirD	</a></li>
+					<li><a id="av-4" href="#">Laboratorio de Simuladores</a></li>
+					<li><a id="av-5" href="#">Simulador X</a></li>
+				</ul>
+		</div>
+		
+		<div class="col-md-9" style="border:1px solid red;">
+			<figure>
+				<img id="imgModelo" src="img/av-1.jpg"  class="img-responsive"  alt="">
+
+			</figure>
+			<div style="border:2px solid purple;margin-top: 50px;	">
+				<h2 class="text-center">Descripcion</h2>
+				<h1 id="nombreModelo">CESSANA 152</h1>
+				<p id="textoAvion">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi exercitationem perferendis repudiandae illo, libero aspernatur incidunt molestiae odit, et sed fugit quod ipsum eos nobis vel, tenetur. Numquam, deleniti.
+				</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<script>
+	
+(function(){
+	var nombreModelo = [
+								"CESSNA 152",
+								"Avión 2",
+								"Simulador RedBird",
+								"Laboratorio Simulado",
+								"Simuladores"
+									];
+	var descripcion = [
+											"Texto largo 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga distinctio illo itaque, maxime odio, blanditiis vero laudantium aut inventore voluptatum. Dolor aut reprehenderit vero adipisci. Dolores, et excepturi sed?",
+											"Texto Largo 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum repellendus quo sunt laboriosam nulla recusandae fugiat assumenda eveniet, error omnis reiciendis quam perspiciatis veniam iure quia voluptas maxime, ullam nostrum.",
+											"Texto Largo 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus atque asperiores ad voluptas vero aliquam odio? Eum nemo officia amet assumenda non omnis, dolorem, alias laboriosam libero, ducimus enim explicabo."										
+											];
+
+	$("#av-1").on("click", function(){
+			var modelo = $(this).attr("id");
+			// console.log($(this)); 
+			// console.log(modelo);
+		  var url   = "img/"+modelo+".jpg";
+			// console.log(url);
+		 $("#imgModelo").fadeOut(50).fadeIn(250).attr("src",url);
+			
+		 $("#textoAvion").html(descripcion[0]);
+		 $("#nombreModelo").html(nombreModelo[0]);
+	});
+
+	$("#av-2").on("click", function(){
+			var modelo = $(this).attr("id");
+			// console.log(modelo); 
+		  var url   = "img/"+modelo+".jpg";
+			// console.log(url);
+		 $("#imgModelo").fadeOut(50).fadeIn(250).attr("src",url);
+		 $("#textoAvion").html(descripcion[1]);
+		 $("#nombreModelo").html(nombreModelo[1]);
+	});
+
+	$("#av-3").on("click", function(){
+			var modelo = $(this).attr("id");
+			// console.log(modelo); 
+		  var url   = "img/"+modelo+".jpg";
+			// console.log(url);
+		 $("#imgModelo").fadeOut(50).fadeIn(250).attr("src",url);
+		 $("#textoAvion").html(descripcion[2]);
+		 $("#nombreModelo").html(nombreModelo[2]);
+	});	
+
+
+})();
+
+</script>
+
+
+
+
+
+</body>
+</html>

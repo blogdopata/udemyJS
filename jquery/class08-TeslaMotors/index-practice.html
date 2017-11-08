@@ -28,7 +28,7 @@
 	</div> 
 
 	<div class="divVistaPrevia">
-		<img id="imgCarro"  class="img-responsive">
+		<img id="imgCarro"  >
 	</div>
 
 	<div class="form-group">
@@ -50,7 +50,6 @@
 
 		var teslaView = {
 
-			
 			colores: ['rojo','cafe','blanco'],
 
 			// Funcion para cambiar color
@@ -59,7 +58,7 @@
 				var $loader = $('.divPreloader');
 				$loader.fadeIn(150);
 
-				if(img ===undefined){
+				if(img === undefined){
 					var color = teslaView.colores[0];
 					img = "img/tesla/modelS-"+color+".jpg";
 				}
@@ -68,17 +67,22 @@
 				//img = "https://static.photocdn.pt/images/articles/2017_1/iStock-545347988.jpg?p="+ahora;
 
 				$("<img>",{
-					src: img,
+					src: img ,
 					class: "img-responsive"
 				})
 					.on("load", function(){
 					
-
 						$(".divVistaPrevia").find("img").remove();
 						$(this).appendTo(".divVistaPrevia");
 
 						$loader.fadeOut(150);
-					})
+					}).animate({
+						width: "100%",
+						opacity: 0.9,
+						marginLeft: "0in",
+						fontSize: "0",
+						borderWidth: "0px"
+						}, 1500 );
 
 			},
 
@@ -109,19 +113,12 @@
 			}
 		}
 
-		teslaView.init(/*{
+		teslaView.init({
 			colores: [
 				'rojo','verde','gris','cafe','negro']
-		}*/);
+		});
 
 	
-
-
-
-
-
-
-
 /*	$("#cmbColor").on("change", function(){
 			var color = $(this).val();
 			var url   = "img/tesla/modelS-"+color+".jpg";
