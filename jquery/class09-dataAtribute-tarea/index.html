@@ -83,11 +83,11 @@
 	(function(){
 
 			$(".imgThumb").on("mouseenter",function(){
-				$color = $(this).data("color");
-				console.log($color)
-				$url = "img/camiseta/large/"+$color+".jpg"
-				$("#camiseta").attr("src",$url);
-				$("#lblColor").html($color);
+				color = $(this).data("color");
+				console.log(color)
+				url = "img/camiseta/large/"+color+".jpg"
+				$("#camiseta").attr("src",url);
+				$("#lblColor").html(color);
 			})
 
 	})();
