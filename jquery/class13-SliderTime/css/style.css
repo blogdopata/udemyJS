@@ -13,4 +13,26 @@
 	display: flex;
 
 }
+@media (max-width: 1000px){
+	body{
+		background:peru;
+	}
+	.slideShow{
+		background-color: red;
+		width:400px;
+		height: 200px;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.slideShow img{
+		background-color: red;
+		width:400px;
+		height: 200px;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+
+
+
+}
 
