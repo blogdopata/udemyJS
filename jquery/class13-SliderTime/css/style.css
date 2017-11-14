@@ -15,9 +15,13 @@
 	display: flex;
 
 }
+
 .slideShow ul li{
 
 }
+
+
+
 @media (max-width: 1000px){
 	body{
 		background:peru;
