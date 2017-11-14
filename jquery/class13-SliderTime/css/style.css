@@ -4,6 +4,8 @@
 	height: 300px;
 	overflow: hidden;
 	margin-bottom: 10px;
+	border:2px solid blue;
+	border-radius: 10px;
 }
 
 .slideShow ul{
@@ -11,6 +13,9 @@
 	list-style: none;
 	margin-left: 0px;
 	display: flex;
+
+}
+.slideShow ul li{
 
 }
 @media (max-width: 1000px){

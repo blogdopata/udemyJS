@@ -9,7 +9,7 @@
 	var intervalo = setInterval(function(){
 		mover("sig");
 	}, 1500);
-
+	
 	function mover( dir , click){
 		if( click ){
 			clearInterval(intervalo);
@@ -22,7 +22,7 @@
 		}else if(actual <= (slides * -1 ) ) {
 			actual = 0;
 		}
-	 //	console.log(actual);
+	  console.log(actual);
 		var margen = actual * ancho;
 
 		var tl = new TimelineMax();
@@ -34,10 +34,7 @@
 		 // $slideshow.animate({
 			// marginLeft: margen, 
 		 // },450);
-		
-
 	}
-
 
 	$(".botSlide").on("click",function(){
 
