@@ -1,11 +1,11 @@
-.slideShow{
+.slideShow {
 	background-color: red;
 	width:600px;
 	height: 300px;
-	overflow: hidden;
+  display: inline-block;
 	margin-bottom: 10px;
-	border:2px solid blue;
-	border-radius: 10px;
+		overflow: hidden;
+
 }
 
 .slideShow ul{
@@ -13,9 +13,12 @@
 	list-style: none;
 	margin-left: 0px;
 	display: flex;
+	border: 2px solid yellow;
 
 }
-
+p{
+  display: inline-block;
+}
 .slideShow ul li{
 
 }

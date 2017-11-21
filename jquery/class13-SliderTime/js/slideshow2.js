@@ -12,15 +12,15 @@
 		if( actual > 0) {
 
 			actual = (slides - 1)*-1;
-		}else if ( actual <= (slides*-1) ){
+		}else if ( actual == (slides*-1) ){
 				actual= 0;
 		}
 
 		var margen = actual * ancho;
 
-		console.log(actual)
+		console.log(actual);
 
-		console.log(margen)
+		console.log(margen);
 
 		$slideshow.animate({
 			marginLeft: margen

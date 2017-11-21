@@ -22,18 +22,13 @@
 		}else if(actual <= (slides * -1 ) ) {
 			actual = 0;
 		}
+
 	  console.log(actual);
 		var margen = actual * ancho;
 
-		var tl = new TimelineMax();
-		tl.to($slideshow,1.2,{
-			marginLeft: margen,
-			ease: Elastic.easeOut.config(1,0.75)
-		})
-
-		 // $slideshow.animate({
-			// marginLeft: margen, 
-		 // },450);
+		$slideshow.animate({
+			 marginLeft: margen, 
+		  },450);
 
 		// var tl = new TimelineMax();
 		// tl.to($slideshow,1.2,{
@@ -41,12 +36,11 @@
 		// 	ease: Elastic.easeOut.config(1,0.75)
 		// })
 
-		 $slideshow.animate({
-			marginLeft: margen, 
-		 },450);
+		  
+
+		
 		
 
->>>>>>> origin/master
 	}
 
 	$(".botSlide").on("click",function(){
