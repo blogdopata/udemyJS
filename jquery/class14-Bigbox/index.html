@@ -25,14 +25,11 @@
 
 
 
-
-
-
 <div class="container">
 	
 	<h1>BigBox: <small>Notification</small></h1>
 	<hr>
-
+	<button class="btn btn-primary">Mostrar big BOx</button>
 
 </div>
 
@@ -42,7 +39,20 @@
 <script src="js/bigbox.js"></script>
 
 <script>
-	$.bigBox();
+	$("button").on("click",function(){
+		$.bigBox({
+			fa: "fa-codipie",
+			titulo: "Desde Boton",
+			contenido: "Contenido :D",
+			boton :"Ingresar a UDEMY"
+		}, function( boton){
+				 console.log(boton);
+
+		});
+
+	});
+
+
 
 </script>
 
