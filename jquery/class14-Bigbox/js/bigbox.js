@@ -24,10 +24,6 @@ $.bigBox = function(opciones){
 	$("body").append( contenido );
 
 
-
-
-
-
 	animar_entrada();
 
 
