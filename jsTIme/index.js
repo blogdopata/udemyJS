@@ -1,12 +1,35 @@
-function imp(){
-	for( var i  = 0 ; i<10000;i++){
-		console.log("imprimio");
+
+
+function Jugador(nombre){
+	this.nombre = nombre;
+	this.hp = 100 ;
+	this.sp = 100;
+	this.curar = function(jugadorObj){
+
+		if(this.sp >= 40){
+			this.sp -= 40;
+			jugadorObj.hp +=20 ;
+		}else {
+			console.info(this.nombre + " no tiene SP")
+		}
+			this.estado(jugadorObj);
+
+		
 	}
-}
+	this.estado = function ( jugadorObj ){
+		console.info(this);
+		console.info(jugadorObj);
+	}
 
-imp();
+};
 
-function presionoClick(){
 
-	console.log("hahaha");
-}
+var warrior  = new Jugador("warrior");
+var legolas = new Jugador("legolas");
+
+console.log(warrior);
+console.log(legolas);
+
+warrior.curar(legolas);
+console.log(warrior);
+console.log(legolas);
