@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		.contain{
+			margin: 50px auto;
+			width:60%;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+
+<div class="contain">
+ 
+ <table>
+ 	<tr>
+	 <td><label for="">Dni: </label></td> 
+	 <td><input type="text" name="dni" onchange="readDNI()"  id="dni" ></td>
+	</tr>
+	<tr>
+		<td><label for="">Nombre</label></td>
+		<td><input type="text" name="nombre" id="nom" disabled> </td></tr>
+	<tr>
+		<td><label for="">Apellido</label></td>
+		<td><input type="text" name="apellido" id="apel" disabled></td>
+	</tr>
+
+</table>
+<p id="testData"></p>
+
+</div>		
+
+	<script>
+		 
+		function readDNI(){
+			valor = document.getElementById("dni").value;
+			if (valor == "45347650") {
+				document.getElementById("nom").value = "Victor A.";
+				document.getElementById("apel").value = "Caballer  C." ;
+				
+			}
+			if (valor == "45347651") {
+				document.getElementById("nom").value = "Omar Jose.";
+				document.getElementById("apel").value = "Silva Castro." ;
+				
+			}
+			if (valor == "45347652") {
+				document.getElementById("nom").value = "Pablo Hernan.";
+				document.getElementById("apel").value = "Tabarez Hurtado." ;
+
+			}
+
+			document.getElementById("testData").innerHTML = 
+			"<strong>" + 
+				document.getElementById("nom").value + document.getElementById("apel").value  + "</strong>";
+
+
+		}
+		
+
+	</script>
+	
+</body>
+</html>
