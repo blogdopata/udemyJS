@@ -1,7 +1,7 @@
 
 
 
-function miFuncion (nom= "victor" ,edad = 20) {
+function miFuncion (nom= "victor" k,edad = 20) {
 	var nombre = nom || "sin nombre";
 	 var edad = edad || 0;
 
