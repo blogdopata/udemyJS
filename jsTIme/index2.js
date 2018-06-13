@@ -7,4 +7,4 @@ Number.prototype.esPosi = function(){
 	}else {
 		return false;
 	}
-}
+} 
