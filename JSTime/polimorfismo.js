@@ -2,7 +2,7 @@
 
 
 
-function determinaDato ( a){
+function determinaDato ( a ){
 
 	if ( a === undefined){
 		console.log("A es undefined ... no se q hacer");
