@@ -1,5 +1,4 @@
 
-
 var carro = {
 		color:"blanco",
 		marca: "mazda",
@@ -16,7 +15,25 @@ var carro2 = {
 
 }
 
-//console.log(carro.primir())
+//console.log(carro.primir.call(carro2))
+
+
+var logCar = function(){
+	console.log("El auto es : ", this.primir());
+
+
+}
+
+
+
+var MlogCar = logCar.bind(carro);
+MlogCar();
+
+
+
+
+
+/*console.log(carro.primir())
 
 var logCarro = function (arg1, arg2) {
 	console.log("Carroz ", this.primir());
@@ -34,3 +51,4 @@ logModeloCarro.call( carro, "123" ,"456");
 logModeloCarro.apply( carro, ["asd" ,"rsw"]);
 
 console.log(carro.primir.call(carro2));
+*/
