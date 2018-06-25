@@ -1,7 +1,7 @@
 
 
 function Persona(Go ){
-
+ 
 	this.nombre =    "victor" || Go;
 	this.ape = "caballero";
 	this.edad = 30;

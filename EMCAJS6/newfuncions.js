@@ -1,7 +1,7 @@
 
 
 var hi="Hola mundo";
-
+ 
 console.log(hi.substring(0,1) ==="H");
 
 console.log(hi.startsWith("hola")); //
