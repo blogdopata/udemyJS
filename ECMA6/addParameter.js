@@ -31,3 +31,5 @@ var persona = {
 }
 
 gg(fnTemporal, persona);
+
+if(true) console.log("enttro al if :D");
