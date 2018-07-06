@@ -41,3 +41,6 @@ persona.getNombre();
 persona.getOtroNombre()
 
 console.log(persona.__proto__.name);
+
+/*  PROPIEDADES COMPUTADAS */
+
