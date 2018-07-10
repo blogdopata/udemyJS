@@ -17,15 +17,19 @@ let perro = {
 	}
 };
 
-
+// Creamos el objeto angora de tipo gato
 let angora = Object.create(gato);
 
-console.log(Object.getPrototypeOf(angora) === gato);
+console.log(Object.getPrototypeOf(angora) === gato , "Es cherto");
 
 angora.sonido();
 angora.chillin();
 
+
+/*Cambiar el prototipo de un objeto por otro Object.setPrototypeOf  */
 Object.setPrototypeOf(angora,perro);
+
+console.log(angora)
 
 
 /*Cambiar el prototipo de un objeto por otro Object.getPrototypeOf  */
@@ -35,7 +39,7 @@ angora.sonido();
 //angora.chillin();
 
 
-/*  SUOER */
+/*  SUPER */
 
 let persona = {
 	saludar(){
