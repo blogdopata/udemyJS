@@ -20,7 +20,7 @@ manejador.init();
 var manejador2 = {
 	id : "123x",
 	init: function(){
-		document.addEventListener("click",
+		window.addEventListener("click",
 			event => this.clickInPage(event.type));
 		//console.log(this)
 	},
