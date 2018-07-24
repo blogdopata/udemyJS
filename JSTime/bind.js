@@ -1,12 +1,11 @@
 
 var carro = {
-		color:"blanco",
+		color: "blanco",
 		marca: "mazda",
-		primir: function  () {
+		primir(){
 			var salida = this.marca + " - " + this.color ;
 			return salida;
 		}
-
 }
 
 var carro2 = {
@@ -15,15 +14,12 @@ var carro2 = {
 
 }
 
-//console.log(carro.primir.call(carro2))
+console.log(carro.primir.call(carro2))
 
 
 var logCar = function(){
 	console.log("El auto es : ", this.primir());
-
-
 }
-
 
 
 var MlogCar = logCar.bind(carro);
