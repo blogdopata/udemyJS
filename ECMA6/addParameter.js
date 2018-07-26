@@ -26,6 +26,7 @@ function gg( fn = fnTemporal , persona = {nombre: "victor"}){
 function fnTemporal(){
     console.log("HOLRA MUNDO FN");
 }
+
 var persona = {
     nombre: "jose"
 }
