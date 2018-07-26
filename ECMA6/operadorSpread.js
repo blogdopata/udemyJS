@@ -1,4 +1,4 @@
-// SPREAD permite especificar in arregloe que sera
+// SPREAD permite especificar in arreglos que sera
 // separado y cada item enviado sera un argunmento independeinte
 
 var numeros = [1,5,51,11,22,33];
