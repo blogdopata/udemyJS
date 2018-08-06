@@ -23,6 +23,6 @@ let { bota:calzado = "adidas" ,premiun: dePago , nombre , email, facebook, twitt
 console.log( twitter);
 console.log(dePago);
 console.log(utube);
-//console.log(bota);*/
+//
 console.log(calzado);
 console.log(ajustes)
