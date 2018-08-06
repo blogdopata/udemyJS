@@ -11,8 +11,8 @@ var simulateClick = function (elem) {
 	var canceled = !elem.dispatchEvent(evt);
 };
 
-
-var someLink = Array.prototype.slice.call(someLink, 0)
+someLink =document.querySelectorAll('.HeartAnimation');
+someLink = Array.prototype.slice.call(someLink, 0);
 
 someLink.forEach(function(element) {
     simulateClick(element)
