@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        #demo{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<h1 id="hit">Texteandoa</h1>
+
+<p id="demo"> xD</p>
+	<script src="moreClassJS6.js"></script>
+    <script>
+        x = document.getElementById("hit");
+        x.innerHTML = "wtf";
+        x.style.color = "#fff";
+        x.style.backgroundColor ="rebeccapurple";
+        x.style.cursor ="pointer";
+       
+        x.addEventListener("click", function(e){
+            let cssString = "transition:2s;background-color:yellow, color: white"
+            x.style.cssText = cssString;
+        })
+
+    
+        
+        
+    </script>
+</body>
+</html>
