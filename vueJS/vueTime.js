@@ -8,7 +8,7 @@
   //   }
 
   // });
-/* */ Ciclo de
+/* Ciclo de   VIDA DE VUE */ 
 var app = new Vue({
     el: "#menu-bar",
     data:{

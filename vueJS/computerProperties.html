@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vueTime</title>
+</head>
+
+<body>
+
+
+    <div id="vm">
+        <button v-on:click="primero++">Incrementar el primero</button>
+        <button v-on:click="segundo++">Incrementar el 2d0</button>
+        <button v-on:click="tercero++">Incrementar el 3ero</button>
+        <button v-on:click="cuarto++">Incrementar el 4to</button>
+
+
+        <p>Primero: {{ primero }}</p>
+        <p>Segundo: {{ segundo }}</p>
+        <p>Tercero: {{ tercero}}</p>
+        <p>Cuarto: {{ cuarto }}</p>
+        <p>Suma: {{ total }}</p>
+
+
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="computerProperties.js"></script>
+</body>
+
+</html>
