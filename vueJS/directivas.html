@@ -11,21 +11,19 @@
 <body>
 
 
-    <nav id="menu-bar">
-        {{msj}} <br> <br>
+    <main id="vm">
+       <p v-if="miVar" >Mi texto</p>
 
-       <button v-on:click= "msj = 'Este es el Nuevo Mensaje'"> Cambiar Mensaje</button>
-        
-       <button v-on:click= "destruir"> Destruior Instncia</button>
-
-    </nav>
-
-  
-
+       {{msj}}
+       <a v-bind:href="miLink"  >Este es un Link</a>
+       <a href="" v-on:click="miMEtodo"> Mi metodo sobrino</a>
+       <input type="text" v-on:keyup.enter="enviar">
+    </main>
+ 
 
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="vueTime.js"></script>
+    <script src="directivas.js"></script>
 </body>
 
 </html>

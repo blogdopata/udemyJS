@@ -11,20 +11,21 @@
 <body>
 
 
-    <main id="vm">
-      <input type="text" v-model="fullname()">
-        <hr>
+    <nav id="menu-bar">
+        {{msj}} <br> <br>
 
-        <h2> Heble {{ nombre }} {{ apellido}}, Welcome </h2>
-          
-    <textarea type="text" v-model="nombre">
- </textarea>
-    </main>
+       <button v-on:click= "msj = 'Este es el Nuevo Mensaje'"> Cambiar Mensaje</button>
+        
+       <button v-on:click= "destruir"> Destruior Instncia</button>
+
+    </nav>
+
+  
 
 
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="enlaceDatos.js"></script>
+    <script src="cicleOllife.js"></script>
 </body>
 
 </html>

@@ -7,8 +7,8 @@ var app = new Vue({
     },
     methods:{
         fullname: function(){
-            console.log( "this.nombre + this.apellido" );   
-             
+            console.log( this.nombre + this.apellido );   
+
             return this.nombre + " "+  this.apellido;
         }
 
