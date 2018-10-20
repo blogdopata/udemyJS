@@ -12,15 +12,19 @@
 
 
     <main id="vm">
-        <img :src="imagen" >
+        <div v-if="mostrar">
+            Primer DIV
+        </div>
 
-        <div>{{ texto }}</div>
-        </main>
- 
+        <div v-else>
+           2do Div del error
+        </div>
+    </main>
+
 
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="v-bind.js"></script>
+    <script src="v-if.js"></script>
 </body>
 
 </html>
