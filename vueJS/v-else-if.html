@@ -13,19 +13,27 @@
 
     <main id="vm">
 
-        <template v-if="mostrar">
+        <div v-if="parrafo==1">
             Primer COntenido a mostarar
-        </template>
+        </div>
 
-        <div v-else>
+        <div v-else-if="parrafo==2">
            2do Div del error
         </div>
+        
+        <div v-else-if="parrafo==23">
+            Tercer Parrafo xD
+         </div>
+
+        <div v-else>
+            EL DEFAUL
+         </div>
     </main>
 
 
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="v-if.js"></script>
+    <script src="v-else-if.js"></script>
 </body>
 
 </html>
