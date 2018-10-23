@@ -12,16 +12,16 @@
 
 
     <main id="evento" >
-        <div v-on:mousemove="mostrarUbicacion" v-on:click="sumCoord" style="height: 300px;border:1px solid red; width:500px">
-            x: {{x}} , y : {{ y }} - Y la suma es : {{sumaCoordenadas}}
+        <button v-on:mouseEnter="sumar" v-on:click="sumar"> Sumar UNo</button> 
+        <button v-on:click="restar"> Restar Uno </button>
+        <hr>
+        {{ contador }}
+    </main>
 
-
-        </div>
-</main>
 
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="objectEvent.js"></script>
+    <script src="eventosPlus.js"></script>
 </body>
 
 </html>

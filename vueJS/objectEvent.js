@@ -3,7 +3,8 @@ new Vue({
     el: '#evento',
     data: {
         x: 0,
-        y:0
+        y:0,
+        sumaCoordenadas:0
     },
     methods:
     {
@@ -12,8 +13,12 @@ new Vue({
             
             this.x = evento.clientX;
             this.y = evento.clientY;
+        },
+        sumCoord: function(){
+            this.sumaCoordenadas = this.x + this.y;
         }
     }
+   
 
 });
 
