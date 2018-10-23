@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vueTime</title>
+</head>
+
+<body>
+
+
+    <main id="vm">
+
+        <ul>
+            <li v-for="pais in paises">
+                <a :href=pais.ruta target="_blank"> {{ pais.nombre }} </a> - {{pais.poblacion}}
+            </li>
+
+        </ul>
+
+        <p v-for="pais in paisesSimple"> {{ pais }} </p>
+
+
+
+        <!-- Para mostrar con el Indice  --> 
+        <ul>
+            <li v-for="(pais, indice) of paises">
+                {{ indice + 1}} -{{ pais.nombre }} - {{pais.poblacion}}
+            </li>
+
+        </ul>
+
+
+
+    </main>
+
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="v-for.js"></script>
+</body>
+
+</html>

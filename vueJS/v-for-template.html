@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vueTime</title>
+</head>
+
+<body>
+
+
+    <main id="vm">
+        <ul>
+
+            <template v-for="pais in paises">
+                <li>
+                    <a :href=pais.ruta target="_blank"> {{ pais.nombre }} </a> - {{pais.poblacion}}
+                </li>
+                <hr>
+            </template>
+        </ul>
+
+       
+
+
+
+    </main>
+
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="v-for-template.js"></script>
+</body>
+
+</html>
