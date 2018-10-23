@@ -1,6 +1,6 @@
 
-
 new Vue({
+    
     el: '#evento',
     data: {
        contador: 0
@@ -17,7 +17,7 @@ new Vue({
     }
 
 
-})
+});
 
 
 

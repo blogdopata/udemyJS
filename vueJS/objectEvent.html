@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vueTime</title>
+</head>
+
+<body>
+
+
+    <main id="evento" >
+        <div v-on:mousemove="mostrarUbicacion" style="height: 300px;border:1px solid red; width:500px">
+            x: {{x}} , y : {{ y }}
+
+
+        </div>
+    </main>
+
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="objectEvent.js"></script>
+</body>
+
+</html>
