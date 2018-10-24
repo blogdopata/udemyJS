@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vueTime</title>
+</head>
+
+<body>
+<!-- ONCE - STOP  --> 
+<!--  para keyup para teclas
+    keyup.delete - alt.67 - space 
+    keyup.13 = enter
+--> 
+    <main id="evento" >
+        <div @mousemove="mostrarUbicacion" @click.once="sumCoord" style="height: 300px;border:1px solid red; width:500px">
+
+            <div @mousemove.stop style="height: 30px;border:1px solid blue; width:500px"></div>
+
+            x: {{x}} , y : {{ y }} - Y la suma es : {{ sumaCoordenadas }}
+
+            <input type="text" @keyup.space="sumCoord">
+
+        </div>
+    </main>
+
+
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="replaceDirectiva.js"></script>
+</body>
+
+</html>
