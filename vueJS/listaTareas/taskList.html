@@ -17,37 +17,31 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 
+
 </head>
 
 <body class="container">
 
     <main id="app" class="jumbotron">
+        <h2>
+            {{ titulo }}
+        </h2>
+        <input v-on:keyup.enter="addList()" type="text" v-model="nuevaTask" placeholder="ingrese">
+        <button class="btn btn-primary" v-on:click="addList()">ADD TO LIST</button>
+        <ul>
+            <li v-for="(data , indice ) of listaCursos" style='border: 1px solid red;margin:20px;'  v-bind:class="{terminada:data.estado}">
+                {{data.nombre}}  - {{data.estado}} - {{indice}}
+                 <span class="float-right"> 
 
-        <h2> {{titulo}} </h2>
-        <div class="input-group">
-            <input v-model="nuevaTarea" type="text" placeholder="Ingrese nueva tarea" class="form-control"
-                v-on:keyup.enter="addTask()">
-
-            <span class="input-group-btn">
-                <button v-on:click="addTask()" class="btn btn-primary" type="button"> Add Task</button>
-            </span>
-        </div>
-        <ul class="list-group">
-            <li v-for="(tarea, indice) of tareas" class="list-group-item" v-bind:class="{terminada:tarea.terminada}">
-                {{tarea.texto}}
-                <span class="float-right">
+                    <button v-on:click="data.estado=!data.estado" class="btn btn-success">Aprendido</button>
+                       |
+                    <button class="btn btn-danger" v-on:click="deleteTask(indice)">Delete</button></span>
                     
-                    <button type="button" class="btn btn-success btn-xs" v-on:click="tarea.terminada=!tarea.terminada">Check</button>
-
-                    <button type="button" class="btn btn-danger btn-xs" v-on:click="borrar(indice)">Delete</button>
-
-
-
-                </span>
             </li>
-           
+
         </ul>
 
+        <h3> Total de Cursos: <span> {{  cantidadCursos() }}</span></h3>
 
     </main>
 
@@ -55,11 +49,8 @@
 
 
 
-
-
-
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="jsVue.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
