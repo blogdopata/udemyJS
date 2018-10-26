@@ -3,3 +3,12 @@ body{
     color:dodgerblue;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
+.terminada{
+    color:gray;
+    text-decoration: line-through;
+}
+.terminada:hover{
+    color:gray;
+    text-decoration: line-through;
+}

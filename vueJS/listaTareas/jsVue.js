@@ -1,5 +1,3 @@
-
-
 var app = new Vue({
     el: "#app",
     data: {
@@ -23,6 +21,8 @@ var app = new Vue({
     methods:{
         addTask: function(){
            var texto = this.nuevaTarea.trim();
+           
+           console.log(texto)
            if(texto){
                this.tareas.push({
                    texto: texto,
@@ -30,11 +30,11 @@ var app = new Vue({
                })
            }
            this.nuevaTarea = '';
+        },
+        borrar: function(indice){
+            console.log(indice);
+            
+            this.tareas.splice(indice,1);
         }
-
     }
-
-
-
-
 })
