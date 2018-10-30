@@ -17,7 +17,6 @@ const app = new Vue({
                 nombre: "React JS",
                 estado: false
             }
-        
         ],
         nuevaTask:"",
        
