@@ -35,6 +35,8 @@ Vue.component('ingresa-tarea', {
                     </span>
                 </div>`,
     data:function(){
+        console.log(data);
+        
         return data;
     },
 
