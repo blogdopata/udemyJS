@@ -31,7 +31,6 @@ Vue.component('add-task', {
             <div class="input-group">
                 <input v-model="nuevaTarea" type="text" placeholder="Ingrese nueva tarea" class="form-control"
                     v-on:keyup.enter="addTask()">
-
                 <span class="input-group-btn">
                     <button v-on:click="addTask()" class="btn btn-primary" type="button"> Add Task</button>
                 </span>
